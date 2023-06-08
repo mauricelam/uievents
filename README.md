@@ -2,6 +2,10 @@
 
 This repository is for the [UI Events specification](https://w3c.github.io/uievents/) (formerly known as DOM 3 Events).
 
+## Fork
+
+This fork adds `UserActivation` column to `key-event-viewer.html`.
+
 ## Goals
 
 The goal of the UI/DOM Events sub-group, part of the Web Applications Working Group, is to complete the

@@ -51,6 +51,11 @@ var _key_table_info = [
 	["Input", "inputbox", [
 		["Input field", "inputbox", "text", {'align': 'left'}],
 	], {'checked': true, 'grouplabel': false}],
+
+	// UserActivation
+	["UserActivation", "useractivation", [
+		["User activation", "useractivation", "text", {'align': 'left'}],
+	], {'checked': true, 'grouplabel': false}]
 ];
 
 var _key_event_info = [
@@ -219,6 +224,11 @@ function addKeyEvent(etype, e) {
 	eventinfo["repeat"] = e.repeat;
 	eventinfo["isComposing"] = e.isComposing;
 	eventinfo["Input field"] = calcInput();
+	try {
+		eventinfo["User activation"] = navigator.userActivation.isActive
+	} catch (e) {
+		eventinfo["User activation"] = "Not supported"
+	}
 
 	extra_class = undefined;
 	if (_isKeydown && document.getElementById("hl_keydown").checked) {
